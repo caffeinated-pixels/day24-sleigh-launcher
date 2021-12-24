@@ -59,13 +59,39 @@ button:hover {
   transform: scale(1.03);
 }
 
-.animate {
-  animation: grandexit 5s;
+.animate1 {
+  animation: moveleft 5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes grandexit {
+@keyframes moveleft {
+  100% {
+    transform: translate(-150%, 0);
+  }
+}
+
+.animate2 {
+  animation: vibrate 750ms linear infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(-150%, 0);
+  }
   20% {
-    transform: translateX(-100%);
+    transform: translate(-152%, 2%);
+  }
+  40% {
+    transform: translate(-152%, -2%);
+  }
+  60% {
+    transform: translate(-148%, 2%);
+  }
+  80% {
+    transform: translate(-152%, -2%);
+  }
+  100% {
+    transform: translate(-150%, 0);
   }
 }
 

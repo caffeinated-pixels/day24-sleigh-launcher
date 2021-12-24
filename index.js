@@ -4,7 +4,12 @@ const btn = document.getElementById('btn')
 btn.addEventListener('click', startAnimation)
 
 function startAnimation() {
-  crew.classList.add('animate')
+  crew.classList.add('animate1')
+  const animated = document.querySelector('.animate1')
+  animated.addEventListener('animationend', () => {
+    console.log('Animation ended')
+    crew.classList.add('animate2')
+  })
 }
 
 // Task:
