@@ -18,11 +18,9 @@ function startSecondAnimation() {
 }
 
 function startCountdown() {
-  console.log('countdown started')
   let count = 5
 
   const intervalID = setInterval(() => {
-    console.log('interval fired')
     if (count > 0) {
       count--
       countdownDisplay.textContent = count
