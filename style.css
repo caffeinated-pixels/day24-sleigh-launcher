@@ -59,6 +59,16 @@ button:hover {
   transform: scale(1.03);
 }
 
+.animate {
+  animation: grandexit 5s;
+}
+
+@keyframes grandexit {
+  20% {
+    transform: translateX(-100%);
+  }
+}
+
 /* 
 Task: 
 - Write the CSS required to launch Santa and his sleigh. Check out this cool animation generator: https://animista.net/play/exits/ */
