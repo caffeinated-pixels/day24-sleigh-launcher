@@ -7,8 +7,8 @@ function startAnimation() {
   crew.classList.add('animate1')
   const animated = document.querySelector('.animate1')
   animated.addEventListener('animationend', () => {
-    console.log('Animation ended')
     crew.classList.add('animate2')
+    setTimeout(() => crew.classList.add('animate3'), 5000)
   })
 }
 

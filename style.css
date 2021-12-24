@@ -60,8 +60,7 @@ button:hover {
 }
 
 .animate1 {
-  animation: moveleft 5s;
-  animation-fill-mode: forwards;
+  animation: moveleft 5s forwards;
 }
 
 @keyframes moveleft {
@@ -92,6 +91,20 @@ button:hover {
   }
   100% {
     transform: translate(-150%, 0);
+  }
+}
+
+.animate3 {
+  animation: grandexit 2s linear forwards;
+}
+
+@keyframes grandexit {
+  0% {
+    transform: translate(-150%, 0);
+  }
+
+  100% {
+    transform: translate(0);
   }
 }
 
