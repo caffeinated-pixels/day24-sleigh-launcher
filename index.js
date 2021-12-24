@@ -1,15 +1,38 @@
 const crew = document.getElementById('crew')
+const countdownDisplay = document.getElementById('countdown')
 const btn = document.getElementById('btn')
 
-btn.addEventListener('click', startAnimation)
+btn.addEventListener('click', startFirstAnimation)
 
-function startAnimation() {
+function startFirstAnimation() {
   crew.classList.add('animate1')
   const animated = document.querySelector('.animate1')
-  animated.addEventListener('animationend', () => {
-    crew.classList.add('animate2')
-    setTimeout(() => crew.classList.add('animate3'), 5000)
-  })
+  animated.addEventListener('animationend', startSecondAnimation)
+}
+
+function startSecondAnimation() {
+  crew.classList.add('animate2')
+  const animated = document.querySelector('.animate1')
+  animated.removeEventListener('animationend', startSecondAnimation)
+  startCountdown()
+}
+
+function startCountdown() {
+  console.log('countdown started')
+  let count = 5
+
+  const intervalID = setInterval(() => {
+    console.log('interval fired')
+    if (count > 0) {
+      count--
+      countdownDisplay.textContent = count
+    } else {
+      countdownDisplay.textContent = 'Lift Off!'
+      clearInterval(intervalID)
+    }
+  }, 1000)
+
+  setTimeout(() => crew.classList.add('animate3'), 5000)
 }
 
 // Task:
